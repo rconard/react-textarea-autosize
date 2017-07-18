@@ -285,7 +285,7 @@ var set = function set(object, property, value, receiver) {
 
 var noop = function noop() {};
 
-var _ref = isBrowser && window.requestAnimationFrame ? [window.requestAnimationFrame, window.cancelAnimationFrame] : [setTimeout, clearTimeout];
+var _ref = isBrowser && window.requestAnimationFrame ? [window.requestAnimationFrame.bind(window), window.cancelAnimationFrame.bind(window)] : [setTimeout, clearTimeout];
 var onNextFrame = _ref[0];
 var clearNextFrameAction = _ref[1];
 
