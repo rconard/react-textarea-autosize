@@ -2,6 +2,4 @@
 *.log
 example/bundle.js
 example/.nojekyll
-lib
-es
 node_modules
